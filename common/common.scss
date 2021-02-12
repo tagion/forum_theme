@@ -225,3 +225,15 @@ body.category-blog .lightbox-wrapper + br + em {
         }
     }
 }
+
+
+// 
+// Disable Latest item, so homepage link works (temp hack)
+// 
+.navigation-container {
+    #navigation-bar {
+        li:first-child {
+            display: none;
+        }
+    }
+}
