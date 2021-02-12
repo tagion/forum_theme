@@ -1,0 +1,11 @@
+.d-header-icons li {
+    margin-left: 3px;
+    
+    &.current-user {
+        margin-left: 6px;
+    }
+}
+
+.d-header-icons .d-icon {
+    width: 50%;
+}
