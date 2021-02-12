@@ -26,15 +26,15 @@ export default createWidget("landing-widget", {
                     ]),
                     h('div.lw-button-list', [
                         h('a.btn.btn-primary.btn-large.btn-icon', { href: "/categories" }, 'Discussion'),
-                        h('a.btn.btn-default.btn-large.btn-icon-text', { href: "/categories" }, [
+                        h('a.btn.btn-default.btn-large.btn-icon-text', { href: "https://t.me/tagionChat", target: '_blank' }, [
                             externalLinkIcon,
                             'Telegram Group'
                         ]),
-                        h('a.btn.btn-default.btn-large.btn-icon', { href: "/categories" }, [
-                            downloadIcon,
-                            'Whitepaper'
-                        ]),
-                        h('a.btn.btn-default.btn-large.btn-icon', { href: "/categories" }, [
+                        // h('a.btn.btn-default.btn-large.btn-icon', { href: "/categories" }, [
+                        //     downloadIcon,
+                        //     'Whitepaper'
+                        // ]),
+                        h('a.btn.btn-default.btn-large.btn-icon', { href: "/t/tagion-faq/81" }, [
                             questionIcon,
                             'FAQ'
                         ]),
