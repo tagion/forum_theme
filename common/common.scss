@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
+
+:root {
+    --heading-font-family: "Barlow", sans-serif;
+    --font-family: "Barlow", sans-serif;
+}
+
 .nav-pills > li > a,
 .btn,
 .btn-flat {
@@ -135,9 +142,10 @@ body.category-blog .lightbox-wrapper + br + em {
 // Landing Widget
 //
 .lw-wrapper {
-    height: calc(100vh - 4em - 2px);
+    min-height: calc(100vh - 4em - 2px);
     padding-top: 4.8em;
     box-sizing: border-box;
+    overflow: hidden;
 
     .wrap {
         display: flex;
@@ -149,7 +157,7 @@ body.category-blog .lightbox-wrapper + br + em {
         width: 100%;
         font-size: 4.4em;
         font-weight: 700;
-        color: #130A54;
+        color: #130a54;
         line-height: 1.1;
         width: 70%;
         padding-right: 2em;
@@ -163,6 +171,8 @@ body.category-blog .lightbox-wrapper + br + em {
 
     .lw-description {
         width: 70%;
+        font-size: 1.2em;
+        color: #444;
 
         @include breakpoint(medium) {
             width: 100%;
@@ -187,13 +197,16 @@ body.category-blog .lightbox-wrapper + br + em {
     }
 
     .lw-bullet-list {
+        
         display: flex;
         flex-wrap: wrap;
         padding: 3em 2em 1em 3em;
-        background: #130A54;
+        margin-left: -3em;
+        width: calc(100% + 3em);
+        background: #130a54;
         border-radius: 6px;
         margin-top: 3em;
-        margin-bottom: 6em;
+        margin-bottom: 1em;
 
         .lw-bullet-item {
             width: 50%;
@@ -210,30 +223,71 @@ body.category-blog .lightbox-wrapper + br + em {
             }
 
             h4 {
-
+                font-size: 1.2em;
             }
 
             p {
                 padding-right: 3em;
-                font-size: 0.9em;
+                // font-size: 0.9em;
 
                 &.lw-bullet-description {
-                    opacity: .8;
+                    opacity: 0.8;
                 }
             }
-            
         }
     }
 }
 
+.lw-toggle {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 0 0;
+}
 
-// 
-// Disable Latest item, so homepage link works (temp hack)
-// 
-.navigation-container {
-    #navigation-bar {
-        li:first-child {
-            display: none;
+// #navigation-bar {
+//     li:first-child {
+//         display: none;
+//     }
+// }
+
+//
+// Footer
+//
+body .custom-footer {
+    background: #130a54;
+    color: #fff;
+
+    .footer-section-link-wrapper a {
+        color: #fff;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
         }
+    }
+
+    .list {
+        margin: 0px 3em 1em 1em;
+        &:last-child {
+            margin: 0px 0 1em 1em;
+        }
+    }
+    .first-box {
+        @include breakpoint(extra-large) {
+            margin: 0px 1em 2em;
+        }
+    }
+
+    .first-box .blurb {
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    .third-box {
+        border-top: 1px solid #30276d;
+    }
+
+    .third-box .small-link {
+        color: #fff;
+        opacity: 0.8;
     }
 }

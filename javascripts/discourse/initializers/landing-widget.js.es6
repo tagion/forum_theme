@@ -8,10 +8,36 @@ export default {
 
     initialize() {
         withPluginApi("0.8", (api) => {
+            // api.addNavigationBarItem({
+            //     name: 'categories-new',
+            //     displayName: 'Categories',
+            //     title: 'Categories',
+            //     before: 'latest',
+            //     customHref: (category, args, router) => {
+            //         return "/categories"
+            //     },
+            //     forceActive: (category, args, router) => {
+            //         return router.currentURL === "/categories"
+            //     }
+            // });
+
+            // api.addNavigationBarItem({
+            //     name: 'home',
+            //     displayName: 'Home',
+            //     title: 'Home',
+            //     before: 'categories-new',
+            //     customHref: (category, args, router) => {
+            //         return "/t/tagion-home/282";
+            //     },
+            //     forceActive: (category, args, router) => {
+            //         return router.currentURL === "/t/tagion-home/282"
+            //     }
+            // });
+
             api.decorateWidget('landing-widget:after', helper => {
                 helper.widget.appEvents.on('page:changed', () => {
-                    toggleMainOutlet();
                     helper.widget.scheduleRerender();
+                    toggleMainOutlet();
                 });
             });
         });

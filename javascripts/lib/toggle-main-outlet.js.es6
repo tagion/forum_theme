@@ -1,10 +1,8 @@
 export default function toggleMainOutlet() {
     let path = location.pathname;
-    let isHomepage = path === "/";
-    let mainOutlet = $('#main-outlet');
-    if (isHomepage) {
-        mainOutlet.addClass('hidden');
-    } else if (mainOutlet.hasClass('hidden')) {
-        mainOutlet.removeClass('hidden');
-    }
+    // if (path.indexOf('categories') === -1) {
+    //     localStorage.setItem('landing-widget-hidden', true);
+    //     $('#tg-landing').addClass('hidden');
+    //     $('#tg-landing-toggle').text('Show Summary');
+    // }
 }
