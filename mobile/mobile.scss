@@ -96,6 +96,7 @@
         }
 
         #post_1 {
+            
             .topic-avatar {
                 height: 25px;
                 width: 25px;
@@ -248,12 +249,14 @@ $split-values: str-split($values, ",");
 
 %page-category {
     #post_1 {
+        border-top: none;
         .topic-avatar {
             height: 25px;
             width: 25px;
             border-top: none;
             background: none;
             margin-right: 5px;
+            display: none;
             img.avatar {
                 height: 25px;
                 width: 25px;
@@ -382,5 +385,9 @@ $split-values: str-split($values, ",");
         blockquote p {
             display: inline;
         }
+    }
+
+    .suggested-topics-wrapper, #topic-footer-buttons, #topic-progress-wrapper, .gap, #topic-title, .topic-meta-data {
+        display: none!important;
     }
 }

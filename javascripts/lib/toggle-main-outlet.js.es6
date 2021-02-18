@@ -3,6 +3,6 @@ export default function toggleMainOutlet() {
     // if (path.indexOf('categories') === -1) {
     //     localStorage.setItem('landing-widget-hidden', true);
     //     $('#tg-landing').addClass('hidden');
-    //     $('#tg-landing-toggle').text('Show Summary');
+    //     $('#tg-landing-toggle').text('Expand Tagion Intro');
     // }
 }

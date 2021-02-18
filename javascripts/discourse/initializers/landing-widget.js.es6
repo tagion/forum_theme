@@ -10,14 +10,14 @@ export default {
         withPluginApi("0.8", (api) => {
             // api.addNavigationBarItem({
             //     name: 'categories-new',
-            //     displayName: 'Categories',
-            //     title: 'Categories',
+            //     displayName: 'Home',
+            //     title: 'Home',
             //     before: 'latest',
             //     customHref: (category, args, router) => {
             //         return "/categories"
             //     },
             //     forceActive: (category, args, router) => {
-            //         return router.currentURL === "/categories"
+            //         return router.currentURL === "/categories" || router.currentURL === "/"
             //     }
             // });
 

@@ -40,30 +40,35 @@ export default createWidget("landing-widget", {
         //     localStorage.setItem('landing-widget-hidden', widgetVisible);
         // }
 
-        if (route.name.indexOf('discovery') !== -1) {
+        if (route.name.indexOf('discovery.categories') !== -1) {
             return [h('div.lw-wrapper#tg-landing', { className: widgetVisible ? '' : 'hidden' }, [
                 h('div.wrap', [
 
-                    h('h2.lw-header', 'Welcome to The Evolution of Money'),
+                    h('h2.lw-header', [
+                        h('span.strong', 'Welcome '),
+                        h('span', 'to The '),
+                        h('span.accent', 'Evolution '),
+                        h('span.accent', 'of Money'),
+                    ]),
                     h('div.lw-description', [
-                        h('p.strong', 'Tagion is an open, non-political monetary system governed as a common.'),
+                        h('p.accent', 'Tagion is an open, non-political monetary system governed as a common.'),
                         h('p', 'Tagion is a scalable monetary and transaction system that provides an algorithmically stable currency, close-to-zero transfer fees, a DEX (Decentralized Exchange) layer, and smart contract applications for banking.'),
                         h('p', 'It allows for a functioning capital market with positive interest rates, competitive and transparent transactions, and financial instruments to everyone everywhere. It is a foundation for economic freedom, privacy, and efficient markets across any borders.')
                     ]),
                     h('div.lw-button-list', [
                         // h('a.btn.btn-primary.btn-large.btn-icon', { href: "/categories" }, 'Discussion'),
-                        h('a.btn.btn-default.btn-large.btn-icon-text', { href: "https://t.me/tagionChat", target: '_blank' }, [
-                            externalLinkIcon,
-                            'Telegram Group'
-                        ]),
+                        // h('a.btn.btn-default.btn-large.btn-icon-text', { href: "https://t.me/tagionChat", target: '_blank' }, [
+                        //     externalLinkIcon,
+                        //     'Telegram Group'
+                        // ]),
                         // h('a.btn.btn-default.btn-large.btn-icon', { href: "/categories" }, [
                         //     downloadIcon,
                         //     'Whitepaper'
                         // ]),
-                        h('a.btn.btn-default.btn-large.btn-icon', { href: "/t/tagion-faq/81" }, [
-                            questionIcon,
-                            'FAQ'
-                        ]),
+                        // h('a.btn.btn-default.btn-large.btn-icon', { href: "/t/tagion-faq/81" }, [
+                        //     questionIcon,
+                        //     'FAQ'
+                        // ]),
                     ]),
                     h('div.lw-bullet-list', [
                         h('div.lw-bullet-item', [
@@ -127,9 +132,9 @@ export default createWidget("landing-widget", {
                                 $('#tg-landing').addClass('hidden');
                             }
 
-                            event.target.innerHTML = widgetVisible ? 'Hide Summary' : 'Show Summary';
+                            event.target.innerHTML = widgetVisible ? 'Hide Tagion Intro' : 'Expand Tagion Intro';
                         }
-                    }, widgetVisible ? 'Hide Summary' : 'Show Summary')
+                    }, widgetVisible ? 'Hide Tagion Intro' : 'Expand Tagion Intro')
                 ])
             ])
             ]

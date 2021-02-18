@@ -453,28 +453,7 @@ $split-values: str-split($values, ",");
 
     #post_1 {
         .topic-avatar {
-            height: 20px;
-            width: 20px;
-            border-top: none;
-            background: none;
             display: none;
-            img.avatar {
-                height: 20px;
-                width: 20px;
-            }
-
-            .avatar-flair {
-                background-size: 8px 8px;
-                width: 10px;
-                height: 10px;
-                top: unset;
-                bottom: -5px;
-                right: -3px;
-                .d-icon {
-                    height: 0.45em;
-                    width: 0.45em;
-                }
-            }
         }
         .topic-body {
             padding-top: 8px;
@@ -503,29 +482,44 @@ $split-values: str-split($values, ",");
                         margin-left: 5px;
                         order: 1;
                     }
-                    .post-info.post-date {
-                    }
                 }
-            }
-            .contents {
-                
-            }
-            .topic-map {
-                margin: 20px -12px 20px -38px;
             }
         }
 
         .cooked {
+            color: #0d0a24;
+
+            h1 {
+                // max-width: 70%;
+                font-size: 3.2em;
+                line-height: 1.1;
+                margin-bottom: 2.8rem;
+                color: #3794af;
+                font-weight: 300;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 2rem;
+            }
+
+            h2 {
+                color: #5e9aac;
+                font-weight: 300;
+                font-size: 2.2em;
+            }
+
+            p {
+                color: #313037;
+            }
+
             big {
-                font-size: 2rem;
+                font-size: 1rem;
                 line-height: 2rem;
                 letter-spacing: 1px;
                 display: inline-block;
-                font-family: Georgia;
             }
 
             & p:first-child + div.lightbox-wrapper {
                 display: none;
+
                 & + p {
                     margin-top: -15px;
                 }
@@ -593,7 +587,7 @@ $split-values: str-split($values, ",");
 
     // CSS below taken from Simon's original Blog Post plugin
     #topic-title h1 {
-        font-size: 3em;
+        font-size: 2em;
     }
     #topic-title a.edit-topic .d-icon {
         font-size: 0.5em;
@@ -616,7 +610,7 @@ $split-values: str-split($values, ",");
     }
 
     .cooked {
-        padding: 0.5em 1em;
+        // padding: 0.5em 1em;
     }
 
     .topic-post {
@@ -624,7 +618,7 @@ $split-values: str-split($values, ",");
     }
 
     .topic-post:first-child {
-        font-size: 1.25em;
+        font-size: 1em;
         line-height: 1.4;
         padding-bottom: 0;
         padding-top: 4px;
@@ -751,7 +745,8 @@ $split-values: str-split($values, ",");
         display: none;
     }
 
-    #topic-footer-buttons, #suggested-topics {
+    #topic-footer-buttons,
+    #suggested-topics {
         display: none;
     }
 
@@ -781,4 +776,49 @@ $split-values: str-split($values, ",");
 
 .d-header-icons .d-icon {
     width: 50%;
+}
+
+//
+// Category Boxes
+//
+
+.category-boxes-with-topics {
+    // justify-content: stretch;
+    // margin-left: -2rem;
+    // width: calc(100% + 4rem);
+}
+
+.category-boxes-with-topics {
+    .category-box {
+        border-left-width: 0;
+        border-top-width: 4px;
+        margin: 0;
+        width: calc(50% - .5rem);
+        margin-top: -2px;
+        color: currentColor;
+        margin-bottom: 1rem;
+
+        &:nth-child(even) {
+            margin-left: 0.5rem;
+        }
+
+        &:nth-child(odd) {
+            margin-right: 0.5rem;
+        }
+
+        .category-box-inner {
+            border-left-width: 2px;
+            border-top-width: 0px;
+            border-color: #f4f4f4;
+
+            h3 {
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.9em;
+                text-align: left;
+                color: #313037;
+            }
+        }
+    }
 }
