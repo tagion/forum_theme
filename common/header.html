@@ -1,0 +1,18 @@
+<script type="text/discourse-plugin" version="0.8">
+    const { h } = require('virtual-dom');
+    const { applyDecorators } = require('discourse/widgets/widget');
+    
+    
+    // const router = Discourse.;
+    //     const route = router.currentRoute;
+    
+    // console.log(route)
+    
+    api.createWidget('nav-links', {
+        tagName: 'nav.links',
+  
+        html(attrs) {
+            return [h('ul.nav.nav-pills', {}, "hello world1")]
+        }
+    });
+</script>
